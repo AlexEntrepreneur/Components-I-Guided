@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
-    <link rel="stylesheet/less" type="text/css" href="accordion/accordion.less" />
+    <link rel="stylesheet/less" type="text/css" href="components/Accordion/Accordion.less" />
+    <link rel="stylesheet/less" type="text/css" href="components/Info/Info.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
     <title>Components I</title>
   </head>
@@ -18,12 +19,6 @@
           <a href="#" class="nav-item">Contact</a>
         </nav>
       </header>
-      <section class="main-content">
-        <h2 class="first-heading">HTML, CSS, or JS</h2>
-        <p class="testing">No, no, no. A vigilante is just a man lost in scramble for his own gratification. He can be destroyed or locked up. But if you make yourself more than just a man, if you devote yourself to an ideal and if they can't stop you then you become something
-          else entirely. Legend, Mr Wayne.
-        </p>
-      </section>
       <section class="secondary">
         <div class="accordion">
           <div class="panel">
@@ -74,10 +69,20 @@
               <p>But if you make yourself more than just a man, if you devote yourself to an idel and if they can't stop you then you become something else entirely. Legend, Mr Wayne.</p>
             </div>
           </div><!-- end of panel -->
-
         </div>
       </section>
+      <!-- <div class="info">
+        <h2 class="first-heading">HTML, CSS, or JS</h2>
+        <button class="info-btn">Show Info</button>
+        <div class="info-content hide-info">
+          <p>No, no, no. A vigilante is just a man lost in scramble for his own gratification. He can be destroyed or locked up. But if you make yourself more than just a man, if you devote yourself to an ideal and if they can't stop you then you become something
+            else entirely. Legend, Mr Wayne.</p>
+        </div>
+      </div> -->
     </div>
-    <script src="accordion/accordion.js" charset="utf-8"></script>
+    <script src="components/Accordion/Accordion.js" charset="utf-8"></script>
+    <script src="components/Accordion/data.js" charset="utf-8"></script>
+    <script src="components/Info/Info.js" charset="utf-8"></script>
+    <script src="components/Info/data.js" charset="utf-8"></script>
   </body>
 </html>
