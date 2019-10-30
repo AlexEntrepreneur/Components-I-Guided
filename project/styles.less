@@ -2,10 +2,18 @@
 @blue: #1b6cff;
 @orange: #ffae1b;
 
-* {
+html {
   box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #191B1F;
 }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: Lato, sans-serif;
