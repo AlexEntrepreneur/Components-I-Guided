@@ -20,33 +20,36 @@ const cardData = [
 ];
 
 // reusuable card component with parameters we will use to pull in our data
+// 0- Create component function
 function createCard(title, subtitle, content, imgsrc) {
-  // define new elements
+  // 1- Create HTML markup
   const card = document.createElement('div');
   const cardTitle = document.createElement('h2');
   const cardSubtitle = document.createElement('p');
   const cardContent = document.createElement('p');
   const cardImg = document.createElement('img');
-
-
-
-  // Setup structure of elements
+  
+  
+  
+  // 2- Define HTML structure
   card.append(cardImg);
   card.append(cardTitle);
   card.append(cardSubtitle);
   card.append(cardContent);
-
-  // set class names
+  
+  // 3- Add CSS styles using classes
   card.classList.add('card');
   cardSubtitle.classList.add('subtitle');
   cardContent.classList.add('desc');
-
-  // set text content
+  
+  // 4- Configure text/img content
   cardContent.textContent = content;
   cardTitle.textContent = title;
   cardSubtitle.textContent = subtitle;
   cardImg.src = imgsrc;
-
+  
+  // 5- Add dynamic functionality
+  
   return card;
 }
 
@@ -57,6 +60,7 @@ const container = document.querySelector('.container');
 
 
 // looping through our data to create multiple card components and appending to the container
+// 6- Generate new elements from data
 cardData.forEach(data => {
   console.log('creating panel:', data.title);
   container.append(createCard(data.title, data.subtitle, data.content, data.imgsrc));

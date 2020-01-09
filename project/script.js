@@ -17,8 +17,9 @@ const panelData = [
   }
 ];
 
+// 0- Create component function
 function createPanel(title, content) {
-  // define new elements
+  // 1- Create HTML markup
   const panel = document.createElement('div');
   const panelBar = document.createElement('div');
   const panelTitle = document.createElement('h3');
@@ -26,31 +27,32 @@ function createPanel(title, content) {
   const buttonOpen = document.createElement('button');
   const buttonClose = document.createElement('button');
   const panelContent = document.createElement('div');
-
-  // Setup structure of elements
+  
+  // 2- Define HTML structure
   panel.append(panelBar);
   panel.append(panelContent);
   panelBar.append(panelTitle);
   panelBar.append(buttonPanel);
   buttonPanel.append(buttonOpen);
   buttonPanel.append(buttonClose);
-
-  // set class names
+  
+  // 3- Add CSS styles using classes
   panel.classList.add('panel');
   panelBar.classList.add('panel-bar');
   buttonPanel.classList.add('panel-buttons');
   buttonOpen.classList.add('panel-btn-open');
   buttonClose.classList.add('panel-btn-close', 'hide-btn');
   panelContent.classList.add('panel-content');
-
-  const open = '\u25bc';
-  const close = '\u25b2';
-  // set text content
-  buttonOpen.textContent = open;
-  buttonClose.textContent = close;
+  
+  // 4- Configure text/img content
+  const openIcon = '\u25bc';
+  const closeIcon = '\u25b2';
+  buttonOpen.textContent = openIcon;
+  buttonClose.textContent = closeIcon;
   panelContent.textContent = content;
   panelTitle.textContent = title;
-
+  
+  // 5- Add dynamic functionality
   buttonPanel.addEventListener('click', event => {
     console.log('Panel detected click: ', event.target);
     // 1. toggle hide-btn on BOTH buttons
@@ -59,7 +61,7 @@ function createPanel(title, content) {
     // 2. Change visibility of the content w/ 'toggle-on'
     panelContent.classList.toggle('toggle-on');
   })
-
+  
   return panel;
 }
 
@@ -67,7 +69,9 @@ const accordion = document.querySelector('.accordion');
 
 // accordion.append(createPanel('Testing', 'We are testing our panel'));
 
+// 6- Generate new elements from data
 panelData.forEach(data => {
   console.log('creating panel', data.title);
   accordion.append(createPanel(data.title, data.content));
 });
+
