@@ -21,32 +21,14 @@ const cardData = [
 
 // 0- Create component function
 
-
-
-
 // 1- Create HTML markup
-
-
-
 
 // 2- Define HTML structure
 
-
-
-
 // 3- Add CSS styles using classes
-
-
-
 
 // 4- Configure text/img content
 
-
-
-
-// 5- Add dynamic functionality
-
-
-
+// 5- Add some dynamic functionality of your choice!
 
 // 6- Generate new elements from data
