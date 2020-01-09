@@ -18,3 +18,35 @@ const cardData = [
     imgsrc: "https://images.unsplash.com/photo-1536168032936-9ce3b4b3165c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
   },
 ];
+
+// 0- Create component function
+
+
+
+
+// 1- Create HTML markup
+
+
+
+
+// 2- Define HTML structure
+
+
+
+
+// 3- Add CSS styles using classes
+
+
+
+
+// 4- Configure text/img content
+
+
+
+
+// 5- Add dynamic functionality
+
+
+
+
+// 6- Generate new elements from data

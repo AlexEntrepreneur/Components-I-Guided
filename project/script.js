@@ -16,3 +16,35 @@ const panelData = [
     content: "I'm here to ensure the League of Shadow fulfills its duty to restore balance to civilization. You yourself fought the decadence of Gotham for years with all your strength, all your resources, all your moral authority. And the only victory you achieved was a lie. Now, you understand? Gotham is beyond saving and must be allowed to die."
   }
 ];
+
+// 0- Create component function
+
+
+
+
+// 1- Create HTML markup
+
+
+
+
+// 2- Define HTML structure
+
+
+
+
+// 3- Add CSS styles using classes
+
+
+
+
+// 4- Configure text/img content
+
+
+
+
+// 5- Add dynamic functionality
+
+
+
+
+// 6- Generate new elements from data
