@@ -6,7 +6,7 @@ const cardData = [
     imgsrc: "https://images.unsplash.com/photo-1564261331932-ea97c182f705?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
   },
   {
-    title: "Leonardo ",
+    title: "Leonardo",
     subtitle: "Surfer / Pizza lover",
     content: "Super Powers: Decelerated Aging, Dermal Armor/Shell Formation, Enhanced Durability, Enhanced Endurance, Retractable Head, Night Vision, Speed Swimming.",
     imgsrc: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
