@@ -18,7 +18,7 @@ const panelData = [
 ];
 
 // 0- Create component function
-function createPanel() {
+function createPanel(title, content) {
   // 1- Create HTML markup
   const panel = document.createElement('div');
   const panelBar = document.createElement('div');
@@ -44,14 +44,23 @@ function createPanel() {
   buttonClose.classList.add('panel-btn-close', 'hide-btn');
   panelContent.classList.add('panel-content');
 
+  // 4- Configure text/img content
+  panelTitle.textContent = title;
+  panelContent.textContent = content;
+  buttonClose.textContent = '\u25BA';
+  buttonOpen.textContent = '\u25BC';
+
   return panel;
 }
 
-console.log(createPanel());
+const accordion = document.querySelector('.accordion');
+
+accordion.append(createPanel('Testing the title', 'Testing the content inside my new component'));
 
 
 
-// 4- Configure text/img content
+
+
 
 // 5- Add dynamic functionality
 
