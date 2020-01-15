@@ -18,12 +18,38 @@ const panelData = [
 ];
 
 // 0- Create component function
+function createPanel() {
+  // 1- Create HTML markup
+  const panel = document.createElement('div');
+  const panelBar = document.createElement('div');
+  const panelTitle = document.createElement('h3');
+  const panelButtons = document.createElement('div');
+  const buttonOpen = document.createElement('button');
+  const buttonClose = document.createElement('button');
+  const panelContent = document.createElement('div');
+  
+  // 2- Define HTML structure
+  panel.append(panelBar);
+  panel.append(panelContent);
+  panelBar.append(panelTitle);
+  panelBar.append(panelButtons);
+  panelButtons.append(buttonOpen);
+  panelButtons.append(buttonClose);
 
-// 1- Create HTML markup
+  // 3- Add CSS styles using classes
+  panel.classList.add('panel');
+  panelBar.classList.add('panel-bar');
+  panelButtons.classList.add('panel-buttons');
+  buttonOpen.classList.add('panel-btn-open');
+  buttonClose.classList.add('panel-btn-close', 'hide-btn');
+  panelContent.classList.add('panel-content');
 
-// 2- Define HTML structure
+  return panel;
+}
 
-// 3- Add CSS styles using classes
+console.log(createPanel());
+
+
 
 // 4- Configure text/img content
 
