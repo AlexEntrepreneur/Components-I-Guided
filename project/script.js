@@ -14,6 +14,10 @@ const panelData = [
   {
     title: "Fourth Panel",
     content: "I'm here to ensure the League of Shadow fulfills its duty to restore balance to civilization. You yourself fought the decadence of Gotham for years with all your strength, all your resources, all your moral authority. And the only victory you achieved was a lie. Now, you understand? Gotham is beyond saving and must be allowed to die."
+  },
+  {
+    title: "Fifth Panel",
+    content: "I'm here to ensure the League of Shadow fulfills its duty to restore balance to civilization. You yourself fought the decadence of Gotham for years with all your strength, all your resources, all your moral authority. And the only victory you achieved was a lie. Now, you understand? Gotham is beyond saving and must be allowed to die."
   }
 ];
 
@@ -40,8 +44,8 @@ function createPanel(title, content) {
   panel.classList.add('panel');
   panelBar.classList.add('panel-bar');
   panelButtons.classList.add('panel-buttons');
-  buttonOpen.classList.add('panel-btn-open');
-  buttonClose.classList.add('panel-btn-close', 'hide-btn');
+  buttonOpen.classList.add('panel-btn-open', 'hide-btn');
+  buttonClose.classList.add('panel-btn-close');
   panelContent.classList.add('panel-content');
 
   // 4- Configure text/img content
@@ -49,19 +53,34 @@ function createPanel(title, content) {
   panelContent.textContent = content;
   buttonClose.textContent = '\u25BA';
   buttonOpen.textContent = '\u25BC';
+  
+  // 5- Add dynamic functionality
+  panelButtons.addEventListener('click', event => {
+    console.log('Click detected on panel', event.target);
+
+    // 1. toggle hide-btn class on buttons
+    buttonOpen.classList.toggle('hide-btn');
+    buttonClose.classList.toggle('hide-btn');
+    // 2. toggle the toggle-on class on the content
+    panelContent.classList.toggle('toggle-on');
+  });
 
   return panel;
 }
 
+// Selecting the container where we want to add our components to
 const accordion = document.querySelector('.accordion');
 
-accordion.append(createPanel('Testing the title', 'Testing the content inside my new component'));
-
-
-
-
-
-
-// 5- Add dynamic functionality
-
 // 6- Generate new elements from data
+panelData.forEach(data => {
+  accordion.append(createPanel(data.title, data.content));
+});
+
+
+
+
+
+
+
+
+
