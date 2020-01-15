@@ -19,16 +19,42 @@ const cardData = [
   },
 ];
 
-// 0- Create component function
+function makingAComponent(title, subtitle, content, imgsrc) {
+  // 1- Create HTML markup
+  const box = document.createElement("div");
+  const boxImage = document.createElement("img");
+  const boxName = document.createElement("h2");
+  const boxSubtitle = document.createElement("p");
+  const boxDescription = document.createElement("p");
+  // 2- Define HTML structure
+  box.append(boxImage);
+  box.append(boxName);
+  box.append(boxSubtitle);
+  box.append(boxDescription);
+  // 3- Add CSS styles using classes
+  box.classList.add("card");
+  boxSubtitle.classList.add('subtitle');
+  boxDescription.classList.add('desc');
+  
+  // 4- Configure text/img content
+  boxName.textContent = title;
+  boxImage.src = imgsrc;
+  boxSubtitle.textContent = subtitle;
+  boxDescription.textContent = content;
+  
+  // 5- Add some dynamic functionality of your choice!
+  boxName.addEventListener('mouseover', event => {
+    boxName.style.backgroundColor = 'red';
+  });
 
-// 1- Create HTML markup
+  return box;
+}
 
-// 2- Define HTML structure
 
-// 3- Add CSS styles using classes
-
-// 4- Configure text/img content
-
-// 5- Add some dynamic functionality of your choice!
-
+const pleaseWork = document.querySelector(".container");
 // 6- Generate new elements from data
+cardData.forEach(data => {
+  pleaseWork.append(
+    makingAComponent(data.title, data.subtitle, data.content, data.imgsrc)
+  );
+});
